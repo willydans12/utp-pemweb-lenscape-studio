@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Major</title>
+  
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-black text-white">
+
+  <!-- SECTION 1: HERO / BANNER -->
+  <section class="hero-section position-relative d-flex align-items-center">
+    <div class="container px-4 position-relative">
+      <!-- Nomor "03" dengan garis coret (di belakang elemen utama) -->
+      <div class="hero-number">03</div>
+      
+      <!-- Teks "Major." di pojok kiri atas -->
+      <h1 class="brand-title">Lenscapes Studio</h1>
+
+      <!-- Judul "Tentang Major." -->
+      <h2 class="hero-title mt-4">
+        Tentang <span class="text-danger">Lenscapes Studio</span>
+      </h2>
+
+      <!-- Paragraf deskripsi -->
+      <p class="hero-description mt-4">
+         <strong>Lenscapes Studio.</strong> Lenscapes Studio adalah tim fotografer profesional yang berfokus pada visual storytelling. Kami percaya bahwa setiap momen memiliki kisah, dan tugas kami adalah menangkapnya dalam bingkai yang bermakna.
+
+         Berbasis di Jakarta, kami telah mengerjakan ratusan proyek mulai dari fashion editorial, dokumentasi perjalanan, hingga kampanye brand berskala nasional. Kami menggabungkan estetika tajam dengan pendekatan dokumenter yang jujur untuk menciptakan hasil karya yang tidak hanya indah, tapi juga punya emosi.
+      </p>
+
+      <!-- Tambahkan di <head> -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<!-- Bagian Konten dengan AOS -->
+<section class="bg-black text-white py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-danger fw-bold mb-4">Lebih Dekat dengan Lenscapes Studio</h2>
+        <p class="fs-5">
+          Kami hadir bukan hanya sebagai penyedia jasa fotografi, tapi sebagai mitra kreatif yang berkomitmen membantu klien menyampaikan cerita mereka secara visual. Kami percaya bahwa setiap proyek, besar maupun kecil, layak mendapatkan perhatian penuh dan pendekatan personal.
+        </p>
+
+        <!-- Tujuan -->
+        <h5 class="mt-4" data-aos="fade-right" data-aos-delay="100">🎯 Tujuan Kami</h5>
+        <p class="fs-5 mb-3" data-aos="fade-right" data-aos-delay="200">
+          Mengabadikan momen dan menciptakan visual yang bermakna serta berdampak. Kami ingin menjadi studio pilihan utama untuk brand, komunitas, dan individu yang ingin tampil otentik di tengah derasnya arus konten visual.
+        </p>
+
+        <!-- Layanan -->
+        <h5 class="mt-4" data-aos="fade-left" data-aos-delay="100">🧰 Layanan Kami</h5>
+        <ul class="fs-5 mb-3" data-aos="fade-left" data-aos-delay="200">
+          <li>Fotografi Komersial & Branding</li>
+          <li>Editorial & Fashion Photoshoot</li>
+          <li>Dokumentasi Acara & Corporate Event</li>
+          <li>Fotografi Perjalanan & Dokumenter</li>
+          <li>Produksi Konten Visual untuk Media Sosial</li>
+          <li>Retouching & Editing Profesional</li>
+        </ul>
+
+        <!-- Nilai -->
+        <h5 class="mt-4" data-aos="zoom-in" data-aos-delay="100">💡 Nilai Utama Kami</h5>
+        <ul class="fs-5" data-aos="zoom-in" data-aos-delay="200">
+          <li><strong>Kreativitas:</strong> Menciptakan karya orisinal dengan pendekatan artistik.</li>
+          <li><strong>Profesionalisme:</strong> Mengedepankan kualitas, ketepatan waktu, dan komunikasi yang terbuka.</li>
+          <li><strong>Empati Visual:</strong> Menangkap momen dari sudut pandang manusiawi dan bermakna.</li>
+          <li><strong>Kolaborasi:</strong> Bekerja berdampingan dengan klien sebagai satu tim yang solid.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tambahkan sebelum </body> -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+      <!-- Tautan / CTA ke bagian "Klien Kami" -->
+      <div class="mt-5">
+        <a href="talenta.html" class="hero-link text-decoration-none text-white">
+          Lihat Talenta Kreatif Kami <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Hidden checkbox untuk toggle overlay menu -->
+    <input type="checkbox" id="nav-toggle" />
+    
+    <!-- Hamburger button dengan class custom-hamburger -->
+    <label for="nav-toggle" class="custom-hamburger">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+    </label>
+
+    <!-- ===== OVERLAY MENU ===== -->
+    <div class="nav-overlay">
+      <!-- Tombol close overlay -->
+      <label for="nav-toggle" class="close-btn pointer">&times;</label>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="menu.html">Proyek Kami</a></li>
+        <li><a href="#talenta">Talenta</a></li>
+        <li><a href="tentang_kami.html">Tentang Kami</a></li>
+        <li><a href="hubungi_kami.html">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SECTION 2: KLIEN KAMI -->
+<section id="clients" class="clients-section py-5 bg-dark text-white">
+  <div class="container px-4">
+    <div class="row align-items-center">
+      <!-- Kolom Kiri: Judul, paragraf dan CTA -->
+      <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+        <p class="text-uppercase text-muted mb-2 small-text">Lihat Talenta Kreatif Kami</p>
+        <h2 class="fw-bold mb-3">Klien Kami</h2>
+        <p class="mb-4" style="max-width: 500px;">
+          Klien kami berasal dari berbagai sektor—mulai dari perusahaan multinasional, merek fashion, startup kreatif,
+          hingga individu yang ingin mengabadikan momen spesial. Mereka mencari mitra visual yang tidak hanya paham
+          teknis fotografi, tapi juga mampu menangkap identitas unik dalam setiap jepretan.
+        </p>
+        <p class="mb-4" style="max-width: 500px;">
+          Kami bangga menjadi bagian dari perjalanan visual mereka.
+        </p>
+        <a href="hubungi_kami.html" class="cta-link text-decoration-none text-white fw-bold">
+          Hubungi Kami <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Kolom Kanan: Logo Klien -->
+      <!-- Kolom Kanan: Logo Klien (Grid 3 Kolom) -->
+<div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+  <div class="row row-cols-3 g-4 justify-content-center">
+    <div class="col text-center">
+      <img src="assets/image/logo1.webp" alt="Klien 1" class="img-fluid" style="max-height: 60px;">
+    </div>
+    <div class="col text-center">
+      <img src="assets/image/logo2.png" alt="Klien 2" class="img-fluid" style="max-height: 80px;">
+    </div>
+    <div class="col text-center">
+      <img src="assets/image/logo3.webp" alt="Klien 3" class="img-fluid" style="max-height: 60px;">
+    </div>
+    <div class="col text-center">
+      <img src="assets/image/logo4.jpg" alt="Klien 4" class="img-fluid" style="max-height: 60px;">
+    </div>
+    <div class="col text-center">
+      <img src="assets/image/logo5.jpg" alt="Klien 5" class="img-fluid" style="max-height: 60px;">
+    </div>
+    <div class="col text-center">
+      <img src="assets/image/logo6.png" alt="Klien 6" class="img-fluid" style="max-height: 60px;">
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+  <!-- SECTION 3: FOOTER -->
+  <footer class="bg-black text-white text-center py-4">
+    <div class="container">
+      <p class="mb-2">Kebijakan Privasi | Syarat &amp; Ketentuan</p>
+      <p class="mb-2">© 2025 oleh Lenscape Studio</p>
+    </div>
+  </footer>
+
+</body>
+</html>
