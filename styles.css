@@ -1,0 +1,788 @@
+/* Reset dasar */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  animation: slideShow 30s infinite;
+}
+
+.slide {
+  flex: 1 0 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  padding: 3rem 0;
+}
+
+/* Sembunyikan checkbox toggle */
+#nav-toggle {
+  display: none;
+}
+
+/* Navbar & Footer Background */
+.bg-black {
+  background-color: #000 !important;
+}
+
+/* Navbar styling */
+.navbar {
+  position: relative;
+}
+
+/* Styling untuk tombol hamburger (label) */
+.navbar-toggler {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Pointer untuk elemen klik */
+.pointer {
+  cursor: pointer;
+}
+
+/* ===== Overlay Menu ===== */
+.nav-overlay {
+  display: none; 
+  position: fixed; 
+  inset: 0;
+  background: #000; 
+  z-index: 1050;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: column;
+}
+#nav-toggle:checked ~ .nav-overlay { 
+  display: flex; 
+}
+
+.nav-overlay .close-btn {
+  position: absolute; 
+  top: 1rem; 
+  right: 1rem;
+  font-size: 2rem; 
+  color: #dc2626; 
+  cursor: pointer;
+}
+
+.nav-overlay ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  text-align: center;
+}
+.nav-overlay li + li { 
+  margin-top: 1.5rem; 
+}
+
+.nav-overlay a {
+  font-size: 2.5rem; 
+  font-weight: bold;
+  color: #fff; /* default putih */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-overlay a:hover {
+  color: #dc2626; /* merah on hover */
+}
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Konten akan ditempatkan di bagian bawah */
+  align-items: center;
+  min-height: 80vh;      /* Hero section akan memiliki tinggi minimal 100% dari viewport */
+  padding-top: 5rem;       /* Atur padding atas sesuai kebutuhan */
+  padding-bottom: 5rem;    /* Atur padding bawah sesuai kebutuhan */
+
+}
+.hero-line-wrapper .hero-line {
+  width: 60px;
+  height: 2px;
+  background-color: #fff;
+}
+
+/* Project Card */
+.project-card {
+  overflow: hidden;
+  cursor: pointer;
+}
+.project-card img {
+  transition: transform 0.3s ease-in-out;
+}
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay di atas gambar dalam Project Card */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  transition: background 0.3s ease-in-out;
+}
+.project-card:hover .overlay-text {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Judul Proyek */
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+/* Link "LIHAT" pada overlay project card */
+.btn-link {
+  color: #fff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.btn-link:hover {
+  color: #ff0000 !important;
+}
+
+/* Teks khusus berwarna merah */
+.text-danger {
+  color: #ff0000 !important;
+}
+
+/* Footer Hover (opsional) */
+footer a.text-danger:hover {
+  text-decoration: none;
+}
+/* ===== Hamburger ===== */
+#nav-toggle { display: none; }
+.hamburger {
+  position: fixed; top: 1rem; right: 1rem;
+  width: 30px; height: 22px; display: flex;
+  flex-direction: column; justify-content: space-between;
+  cursor: pointer; z-index: 1100;
+}
+.hamburger .bar {
+  width: 100%; height: 3px; background: #dc2626;
+  transition: transform .3s, opacity .3s;
+}
+/* transform to X */
+#nav-toggle:checked + label .bar1 { transform: rotate(45deg) translate(5px,5px); }
+#nav-toggle:checked + label .bar2 { opacity: 0; }
+#nav-toggle:checked + label .bar3 { transform: rotate(-45deg) translate(5px,-5px); }
+
+/* styles.css */
+
+/* ======= RESET & GLOBAL ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.bg-black {
+  background-color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+/* ======= HERO SECTION ======= */
+.hero-section {
+  min-height: 80vh;
+  padding: 60px 0;
+  position: relative;
+}
+
+.hero-number {
+  font-size: 4rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  text-decoration: line-through;
+  z-index: 0;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title .text-danger {
+  color: #dc3545;
+}
+
+.hero-description {
+  max-width: 600px;
+  line-height: 1.7;
+  margin-top: 1rem;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-link {
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ======= CUSTOM HAMBURGER MENU ======= */
+#nav-toggle {
+  display: none;
+}
+
+.custom-hamburger {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.custom-hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #dc2626;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Transformasi menjadi X ketika aktif */
+#nav-toggle:checked + label.custom-hamburger .bar.bar1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+#nav-toggle:checked + label.custom-hamburger .bar.bar2 {
+  opacity: 0;
+}
+
+#nav-toggle:checked + label.custom-hamburger .bar.bar3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ======= NAV OVERLAY ======= */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  z-index: 1090;
+  transition: opacity 0.3s;
+}
+
+#nav-toggle:checked ~ .nav-overlay {
+  display: block;
+  opacity: 1;
+}
+
+.nav-overlay .close-btn {
+  font-size: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.nav-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 100px 0 0;
+  text-align: center;
+}
+
+.nav-overlay ul li {
+  margin: 2rem 0;
+  
+}
+
+.nav-overlay ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 3rem; /* Ukuran teks lebih besar */
+  text-decoration: none;
+  line-height: 1.2; /* Sesuaikan spacing vertikal */
+}
+
+/* ======= KLIEN KAMI SECTION ======= */
+.clients-section {
+  background-color: #111;
+  color: #fff;
+}
+
+.small-text {
+  letter-spacing: 1px;
+  font-size: 0.75rem;
+}
+
+.client-logo {
+  max-height: 40px;
+  filter: invert(100%);
+}
+
+.cta-link {
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.cta-link:hover {
+  color: #dc3545;
+}
+
+.arrow {
+  color: #dc3545;
+  margin-left: 0.25rem;
+}
+
+/* ======= FOOTER SECTION ======= */
+.footer-section {
+  background-color: #000;
+  border-top: 1px solid #222;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+}
+
+/**************************************************
+  Style Khusus Halaman Talenta (tanpa konflik)
+**************************************************/
+
+/* HERO SECTION */
+.talenta-hero-section {
+  background-color: #000;
+  padding: 4rem 0;
+}
+
+/* PROFILE SECTION */
+.talenta-profile-section {
+  background-color: #000;
+  color: #fff;
+}
+.talenta-profile-name {
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 2px solid #c00;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* BANNER / SLIDESHOW VIDEO SECTION */
+.talenta-banner-section {
+  position: relative;
+  min-height: 70vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Sembunyikan semua slide secara default */
+.talenta-banner-slide {
+  display: none;
+  position: relative;
+}
+
+/* Tampilkan slide yang aktif berdasarkan radio button */
+#banner-slide1:checked ~ .talenta-banner-slides .slide1,
+#banner-slide2:checked ~ .talenta-banner-slides .slide2,
+#banner-slide3:checked ~ .talenta-banner-slides .slide3 {
+  display: block;
+}
+
+/* Container slide */
+.talenta-banner-slides {
+  position: relative;
+}
+
+/* Video styling */
+.talenta-banner-video {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay untuk judul slide */
+.talenta-banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px #000;
+}
+.talenta-banner-title {
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* Tombol Navigasi Panah */
+.talenta-banner-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none; /* memudahkan klik label */
+}
+.talenta-banner-arrow {
+  pointer-events: auto;
+  position: absolute;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0,0,0,0.3);
+  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+/* Posisi panah khusus */
+.talenta-banner-arrow.left { left: 1rem; }
+.talenta-banner-arrow.right { right: 1rem; }
+
+/* Tampilkan tombol navigasi sesuai slide aktif */
+
+/* Untuk slide 1 aktif */
+#banner-slide1:checked ~ .talenta-banner-nav .arrow-slide1 {
+  display: inline-block;
+}
+/* Untuk slide 2 aktif */
+#banner-slide2:checked ~ .talenta-banner-nav .arrow-slide2 {
+  display: inline-block;
+}
+/* Untuk slide 3 aktif */
+#banner-slide3:checked ~ .talenta-banner-nav .arrow-slide3 {
+  display: inline-block;
+}
+
+/* GALLERY SECTION */
+.talenta-gallery-section {
+  background-color: #181818;
+}
+
+/* Carousel Styles */
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tampilkan slide berdasarkan radio button yang dipilih */
+#slide1:checked ~ .carousel-slides .slide1,
+#slide2:checked ~ .carousel-slides .slide2,
+#slide3:checked ~ .carousel-slides .slide3 {
+  opacity: 1;
+  position: relative;
+}
+
+/* Navigasi */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-nav label {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  user-select: none;
+}
+
+/**************************************************
+   SLIDESHOW VIDEO SECTION (Tanpa JS)
+**************************************************/
+.talenta-banner-section {
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  /* Tinggi disesuaikan; misalnya 70vh */
+  height: 70vh;
+}
+
+/* Container utama carousel */
+.talenta-carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sembunyikan radio input */
+.talenta-carousel-container input {
+  display: none;
+}
+
+/* Wrapper slide */
+.talenta-carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Setiap slide */
+.talenta-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Tampilkan slide sesuai radio button yang dipilih */
+#talenta-slide1:checked ~ .talenta-carousel-slides .talenta-s1,
+#talenta-slide2:checked ~ .talenta-carousel-slides .talenta-s2,
+#talenta-slide3:checked ~ .talenta-carousel-slides .talenta-s3 {
+  opacity: 1;
+  position: relative;
+}
+
+/* Styling video */
+.talenta-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Caption slide */
+.talenta-slide-caption {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.talenta-slide-caption h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Navigasi (Prev & Next) */
+.talenta-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: none; /* Sembunyikan semua dulu */
+  pointer-events: none;
+}
+.talenta-nav label {
+  pointer-events: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  user-select: none;
+  border-radius: 50%;
+}
+
+/* Tempatkan tombol Prev di kiri dan Next di kanan */
+.talenta-nav .prev { left: 1rem; position: absolute; }
+.talenta-nav .next { right: 1rem; position: absolute; }
+
+/* Tampilkan blok navigasi sesuai slide aktif */
+#talenta-slide1:checked ~ .talenta-nav.talenta-nav1 { display: block; }
+#talenta-slide2:checked ~ .talenta-nav.talenta-nav2 { display: block; }
+#talenta-slide3:checked ~ .talenta-nav.talenta-nav3 { display: block; }
+
+/* Section latar belakang opsional */
+.custom-gallery-section {
+  background-color: #111; /* sesuaikan */
+}
+
+/* Warna teks default jika perlu */
+.custom-gallery-section p,
+.custom-gallery-section span {
+  color: #fff;
+}
+
+/* Posisi container gambar */
+.gallery-item {
+  position: relative;
+  overflow: hidden; /* supaya overlay tidak keluar area */
+}
+
+/* Gambar menyesuaikan container */
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* efek zoom */
+}
+
+/* Overlay: penuh menutupi gambar */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0; /* disembunyikan */
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+/* Saat hover .gallery-item, tampilkan overlay dan zoom in gambar */
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Teks dalam overlay */
+.gallery-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.gallery-subtext {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* styles.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+  background-color: red;
+}
+
+.menu-icon:focus span,
+.menu-icon:hover span {
+  background-color: #ff6666;
+}
+
+.section-number {
+  font-size: 4rem;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: white;
+  border: none;
+}
+
+.text-red {
+  color: red !important;
+}
+
+/* Hover effect for texts */
+header h1:hover,
+h2:hover,
+p:hover,
+label:hover,
+a:hover,
+.btn-link:hover {
+  color: red !important;
+  cursor: pointer;
+}
+
+/* Form input and focus styles */
+.form-control {
+  color: #fff;
+  background-color: transparent;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-control:focus {
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 1px solid red !important;
+  box-shadow: none;
+}
+
+.custom-footer {
+  background: #000;
+}
+
+.custom-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.custom-footer a:hover {
+  color: red;
+}
